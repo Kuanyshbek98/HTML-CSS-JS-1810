@@ -1,0 +1,109 @@
+﻿  https://css-tricks.com/almanac/selectors/a/active/
+  https://web.archive.org/web/20160503041723/https://drafts.csswg.org/selectors-4/
+         
+
+#pond {
+  display: flex; 
+  justify-content:flex-end;
+  align-items: flex-end;
+  flex-direction:row-reverse;
+}
+.mr{
+  display: none;
+  color: rgb(105, 105, 126);
+}
+	justify-content:// ����������� ��������
+flex-start: �������� ������������� �� ����� ������� ����������.
+flex-end: �������� ������������� �� ������ ������� ����������.
+center: �������� ������������� �� ������ ����������.
+space-between: ���������� �����?���� ����� ��� �?�������.
+space-around: ���������� ����������� ����� ���������� ����������.
+  	align-items:// ��������� ��������
+flex-start: �������� ������������� �� �������� ���� ����������.
+flex-end: �������� ������������� �� ������� ���� ����������.
+center: �������� ������������� ����������� �� ������ ����������.
+baseline: ������ ����������? ����� ����?���� �?��������.
+stretch: ���������� ������� ?��� ���������� ��������.
+ 	flex-direction: // ������������� ����� �������� ���������
+row: �������� ����������� �� ����������� ������.
+row-reverse: �������� ������������ � �������� ������� � ����������� ������.
+column: �������� ������������� ������ ����.
+column-reverse: �������� ������������� ����� �����.
+
+.yellow {
+order:1; // 1-����� ���� ����� ��� �� ��� ������� ����� ��������, 0-����� ���������, -1 ����� ��� ��� ������� �������� ���������
+}
+
+.yellow {
+align-self:flex-end;  // ��� ������� �������� �������
+}
+
+	flex-wrap // ������������� ������ ������� �������
+nowrap: ������� ��������� ��������������� �������������, ���� ��� ����������� � ���� ���.
+wrap: �������� ������������� ����������� �� ����� ������.
+wrap-reverse: �������� ������������� ����������� �� ����� ������, �� ������ ����������� � �������� �������.
+	flex-flow  // ������������� column ���� wrap ��� ��������� ��� ������ ����
+#pond {
+  display: flex;
+flex-flow:column wrap
+}
+	align-content // ������������� ����� ���������
+
+
+#pond {
+  display: flex;
+flex-direction:column-reverse; 
+flex-wrap:wrap-reverse;
+align-content:space-between;
+justify-content:center;
+} 
+
+-----------------------------------------------------
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 250px);
+  grid-template-rows: repeat(6, 80px);
+  background-color: rgb(255, 255, 227);
+  grid-row-gap: 20px;
+  grid-column-gap: 15px;
+}
+.container > div {
+  background-color: green;
+  text-align: center;
+}
+
+/* .item:nth-child(2) {
+  grid-column: ;
+  grid-row:  ;
+} */
+.item:nth-child(1) { 
+  grid-column: span 2 ;
+  grid-row: span 2 ;
+}
+
+.item:nth-child(2) { 
+  grid-column: span 3 ;
+  grid-row: span 3 ;
+}
+.item:nth-child(3) { 
+  grid-column: span 2 ;
+  grid-row: span 2 ;
+}
+.item:nth-child(4) { 
+}
+.item:nth-child(5) { 
+  grid-column: span 2 ;
+  grid-row: span 3 ;
+}
+.item:nth-child(6) { 
+  grid-column: span 3 ;
+  grid-row: span 2 ;
+}
+
+
+2) �SS ������� : 
+ display: flex;
+  flex-wrap: wrap;   
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
