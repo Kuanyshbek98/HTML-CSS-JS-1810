@@ -1,3 +1,27 @@
+// const person = {. .}
+
+// const ageKey = "age";
+// console.log(person[ageKey]);
+// console.log(person["complex key"]);
+
+// const { name, age: personAge = 12, languages } = person;  
+// console.log("----- " + name, personAge, languages);
+
+// Object.keys(person).forEach((key) => { 
+//   console.log('key:', key)  // элементтер аты
+//   console.log('value:', person[key]) // value -сі
+// })
+
+// console.log(`"${key}": ${this[key]}`); / 
+
+// const self = this; //    .bind(this) 
+
+//  .bind(person)();  
+//    Object.function.call(person);
+//  .call(person, true, true, true);  
+//  .apply(person, [true, true, true]);
+
+// -----------------------
 const person = {
   name: "Vladilen",
   age: undefined,
@@ -46,7 +70,7 @@ console.log("----- " + name, personAge, languages);
 //   }
 // }
 
-// Object.keys(person).forEach((key) => { //Обьектті массике айналдыру, forEach цикл арқылы обьектті шығрару
+// Object.keys(person).forEach((key) => { //Обьектті массивке айналдыру, forEach цикл арқылы обьектті шығрару
 //   console.log('key:', key)  // элементтер аты
 //   console.log('value:', person[key]) // value -сі
 // })
@@ -59,39 +83,34 @@ const logger = {
   //   console.log("Object Keys: ", Object.keys(this)); // обьектті функция арқылы шақыру
   // },
   // sayid kamul
-
-  keysAndValues() {
-    // "key": value
-    const self = this;
-    Object.keys(self).forEach(function (key) {
-      //   =>{}  арқылы функция жазса this істейді
-      // console.log(`"${key}": ${this[key]}`)
-      console.log(self[key] + ":");
-    });
-    // const self = this  //  function() арқылы жазса істемейді, ол істеу үшін this-ді переменныйға теңестіру керек
-    // Object.keys(this).forEach(
-    //   function (key) {
-    //     //  -----
-    //     console.log(`"${key}": ${this[key]}`);
-    //   }.bind(this)
-    // );
-  },
-
+  // keysAndValues() {
+  //   // "key": value
+  //   const self = this;
+  //   Object.keys(this).forEach((key) => {
+  //     // =>{}  арқылы функция жазса this істейді
+  //     console.log(`"${key}": ${this[key]}`);
+  //     // console.log(this[key] + ":");
+  //   });
+  //   // const self = this; //  function() арқылы жазса істемейді, ол істеу үшін this-ді переменныйға теңестіру керек, немесе функция соңына .bind(this) -деп жалғау керек
+  //   Object.keys(this).forEach(
+  //     function (key) {
+  //       console.log(`"${key}": ${this[key]}`);
+  //     }.bind(this)
+  //   );
+  // },
   // withParams(top = false, between = false, bottom = false) {
   // if (top) {
   //   console.log("------- Start -------");
   // }
-
   // Object.keys(this).forEach((key, index, array) => {
   //Object.keys(this)-деген this -арқылы берілген обьектті keys-арқылы жеке-жеке эльементтерін ұстау
   //  ал forEach(key) -деген сол ұсталған элементтерді циклға салып, key - ді переменный ретінде алу
   // index,array -ққосымша переменныйлар алуға болады
   // console.log(`"${key}": ${this[key]}`); // key - обьект элементті; this[key]-обьект элементтінің индекс бойынша ұстаған value-сі
-  // if (between && index !== array.length - 1) {
+  // if (between && index !== array.length - 1) {// функция арқылы келген переменный мен цикл арқылы келген переменныйды теңестіріп шарт қоюға болады
   // console.log("--------------");
   // }
   // });
-
   // if (bottom) {
   //   console.log("------- End -------");
   // }
@@ -106,7 +125,7 @@ const logger = {
 // logger.withParams.call(person); //true, true, true - қосымша переменныйлар жіберу
 // logger.withParams.call(person, true, true, true); //true, true, true - қосымша переменныйлар жіберу
 // logger.withParams.apply(person, [true, true, true]);
-
+// -------------------------------------------------
 // const mun = {
 //   // name: "Vladilen",
 //   // age: 26,
@@ -122,4 +141,4 @@ const logger = {
 
 // mun.kaey.apply(person,["KUKa", 5]);
 
-logger.keysAndValues.apply(person, ["KUKa", 5]);
+// logger.keysAndValues.apply(person);
