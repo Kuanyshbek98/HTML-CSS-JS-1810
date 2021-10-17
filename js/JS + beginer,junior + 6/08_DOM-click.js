@@ -197,7 +197,7 @@ myButton.onclick = function () {
 };
 function setUserName() {
   var myName = prompt("Please enter your name.");
-  localStorage.setItem("name", myName); //localStorage.setItem - кэш, папка сияқты нәрсе ішіне данный саып қайта алуға болады: 
+  localStorage.setItem("name", myName); //localStorage.setItem - кэш, папка сияқты нәрсе ішіне данный салып қайта алуға болады: 
   // set-get  алу-қою
   console.log("-" + localStorage.getItem("name"));
   myHeading.textContent = "Mozilla is cool, " + myName;

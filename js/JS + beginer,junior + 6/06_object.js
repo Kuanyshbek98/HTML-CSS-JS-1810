@@ -50,6 +50,8 @@ const person = {
 // person.languages.push('by')
 // person["key_4"] = undefined; // обьект ішіндегі элемнентті  өзгерту
 delete person["key_4"]; // обьект ішіндегі элемнентті  жою
+// configurable:false; // обьект іщіне осындай элемент берсе өшіре алмайды
+// configurable:true;	// өшәре алады
 
 // console.log(person);
 // console.log(person['key_4'])

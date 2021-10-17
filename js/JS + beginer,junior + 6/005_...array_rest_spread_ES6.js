@@ -1,10 +1,26 @@
+// Array.from(arguments) 
+// return Array.from(arguments).reduce((acc, i) => acc += i, 0) / arguments.length
+
+// const fib = [1, ...array]
+// const [a, b = 42, ...c] = array    
+// const [a,, c] = array   
+// const { city, country, street = "Tverskaya", concat: addressConcat } = address;
+// const { city, ...rest } = address;  
+// const newAddress = { ...address, street: "Tverskaya", code: 123 };
+
+// -------------------------------------------
 // Rest
-function average(a, b, ...args) {
-  // Array.from(arguments) болғанда () іші бос болады
-  // return Array.from(arguments).reduce((acc, i) => acc += i, 0) / arguments.length
+function average(a, b, ...args) { // ...args
   return args.reduce((acc, i) => (acc += i), 0) / args.length;
 }
-// console.log(average(10, 20, 30, 40, 50))
+console.log(average(10, 20, 30, 40, 50))
+
+
+function average() {
+  // Array.from(arguments) болғанда () іші бос болады
+  return Array.from(arguments).reduce((acc, i) => acc += i, 0) / arguments.length
+}
+console.log(average(10, 20, 30, 40, 50))
 
 // Spread
 // const array = [1, 2, 3, 5, 8, 13]

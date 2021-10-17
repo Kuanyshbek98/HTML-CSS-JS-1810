@@ -1,9 +1,9 @@
 // const title = 'Hello'
 //
 // const isVisible = () => Math.random() > 0.5
-//
+////  ``осы белгі арқылы текст жазу, условия беругеде болады
 // const template = `
-//   ${isVisible() ? `<p>Visible</p>` : ''} //``осы белгі арқылы текст жазу, условия беругеде болады
+//   ${isVisible() ? `<p>Visible</p>` : ''}
 //   <h1 id='demo' style="color: red">${title}</h1>
 // `
 //

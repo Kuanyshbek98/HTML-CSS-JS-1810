@@ -1,8 +1,9 @@
 const symbol = Symbol("demo"); // Symbol() - глобалный
 const other = Symbol("demo"); //бір атаумен екі переменный керек болса-астында ссылка бар
 
-// console.log(symbol)
-// console.log(other)
+
+console.log(symbol)
+console.log(other)
 //
 // console.log(symbol === other)  // бұл екеуі бірдей болсада тең емес, әр қайсысы уникальный символ
 
@@ -13,7 +14,7 @@ const obj = {
 };
 
 for (let key in obj) {
-  console.log(key); // цикл кезінде  [symbol]:-ды оқымайды
+  // console.log(key); // цикл кезінде  [symbol]:-ды оқымайды
 }
 
 console.log(obj.demo);
